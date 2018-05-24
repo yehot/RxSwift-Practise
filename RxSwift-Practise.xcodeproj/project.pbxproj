@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C593A31E9411F5BBE9F0281 /* Pods_RxSwift_Practise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD2401F12B8702CC2229A2D /* Pods_RxSwift_Practise.framework */; };
+		B23A9DA920B701B100E75652 /* A_DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DA820B701B100E75652 /* A_DemoViewController.swift */; };
 		B2B74F8220B6F1AB000509CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B74F8120B6F1AB000509CA /* AppDelegate.swift */; };
 		B2B74F8420B6F1AB000509CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B74F8320B6F1AB000509CA /* ViewController.swift */; };
 		B2B74F8720B6F1AB000509CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B74F8520B6F1AB000509CA /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		1DD2401F12B8702CC2229A2D /* Pods_RxSwift_Practise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_Practise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D53A49ED5DFB453C009990A /* Pods-RxSwift-Practise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Practise.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Practise/Pods-RxSwift-Practise.release.xcconfig"; sourceTree = "<group>"; };
 		A28817EEC9D492D0B289450F /* Pods-RxSwift-Practise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Practise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Practise/Pods-RxSwift-Practise.debug.xcconfig"; sourceTree = "<group>"; };
+		B23A9DA820B701B100E75652 /* A_DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_DemoViewController.swift; sourceTree = "<group>"; };
 		B2B74F7E20B6F1AB000509CA /* RxSwift-Practise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Practise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B74F8120B6F1AB000509CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B74F8320B6F1AB000509CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				B2B74F8120B6F1AB000509CA /* AppDelegate.swift */,
 				B2B74F8320B6F1AB000509CA /* ViewController.swift */,
+				B23A9DA820B701B100E75652 /* A_DemoViewController.swift */,
 				B23A9DA720B6F21800E75652 /* Supporting Files */,
 			);
 			path = "RxSwift-Practise";
@@ -212,6 +215,7 @@
 			files = (
 				B2B74F8420B6F1AB000509CA /* ViewController.swift in Sources */,
 				B2B74F8220B6F1AB000509CA /* AppDelegate.swift in Sources */,
+				B23A9DA920B701B100E75652 /* A_DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
