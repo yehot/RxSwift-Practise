@@ -36,7 +36,7 @@ class A_DemoViewController: UIViewController {
         // subscribe(on: )
         textField.rx.text
             .subscribe { (event: Event<String?>) in
-                print(event.element!!)  // 需要解包两次
+                print(event.element as Any)  // 需要解包两次
             }
             .disposed(by: bag)
         

@@ -10,6 +10,7 @@
 		8C593A31E9411F5BBE9F0281 /* Pods_RxSwift_Practise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD2401F12B8702CC2229A2D /* Pods_RxSwift_Practise.framework */; };
 		B23A9DA920B701B100E75652 /* A_DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DA820B701B100E75652 /* A_DemoViewController.swift */; };
 		B23A9DAB20B7039D00E75652 /* B_DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DAA20B7039D00E75652 /* B_DemoViewController.swift */; };
+		B23A9DD420B82BC000E75652 /* C_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DD320B82BC000E75652 /* C_ViewController.swift */; };
 		B2B74F8220B6F1AB000509CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B74F8120B6F1AB000509CA /* AppDelegate.swift */; };
 		B2B74F8420B6F1AB000509CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B74F8320B6F1AB000509CA /* ViewController.swift */; };
 		B2B74F8720B6F1AB000509CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B74F8520B6F1AB000509CA /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		A28817EEC9D492D0B289450F /* Pods-RxSwift-Practise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Practise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Practise/Pods-RxSwift-Practise.debug.xcconfig"; sourceTree = "<group>"; };
 		B23A9DA820B701B100E75652 /* A_DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_DemoViewController.swift; sourceTree = "<group>"; };
 		B23A9DAA20B7039D00E75652 /* B_DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B_DemoViewController.swift; sourceTree = "<group>"; };
+		B23A9DD320B82BC000E75652 /* C_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_ViewController.swift; sourceTree = "<group>"; };
 		B2B74F7E20B6F1AB000509CA /* RxSwift-Practise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Practise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B74F8120B6F1AB000509CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B74F8320B6F1AB000509CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,9 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				B2B74F8120B6F1AB000509CA /* AppDelegate.swift */,
-				B2B74F8320B6F1AB000509CA /* ViewController.swift */,
 				B23A9DA820B701B100E75652 /* A_DemoViewController.swift */,
 				B23A9DAA20B7039D00E75652 /* B_DemoViewController.swift */,
+				B23A9DD320B82BC000E75652 /* C_ViewController.swift */,
+				B2B74F8320B6F1AB000509CA /* ViewController.swift */,
 				B23A9DA720B6F21800E75652 /* Supporting Files */,
 			);
 			path = "RxSwift-Practise";
@@ -218,6 +221,7 @@
 			files = (
 				B2B74F8420B6F1AB000509CA /* ViewController.swift in Sources */,
 				B2B74F8220B6F1AB000509CA /* AppDelegate.swift in Sources */,
+				B23A9DD420B82BC000E75652 /* C_ViewController.swift in Sources */,
 				B23A9DAB20B7039D00E75652 /* B_DemoViewController.swift in Sources */,
 				B23A9DA920B701B100E75652 /* A_DemoViewController.swift in Sources */,
 			);
@@ -367,10 +371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R43737H5WP;
 				INFOPLIST_FILE = "RxSwift-Practise/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shuwen.RxSwift-Practise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -386,10 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R43737H5WP;
 				INFOPLIST_FILE = "RxSwift-Practise/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shuwen.RxSwift-Practise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
