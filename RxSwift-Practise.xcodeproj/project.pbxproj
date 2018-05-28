@@ -11,8 +11,8 @@
 		B23A9DA920B701B100E75652 /* A_DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DA820B701B100E75652 /* A_DemoViewController.swift */; };
 		B23A9DAB20B7039D00E75652 /* B_DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DAA20B7039D00E75652 /* B_DemoViewController.swift */; };
 		B23A9DD420B82BC000E75652 /* C_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DD320B82BC000E75652 /* C_ViewController.swift */; };
+		B23A9DD620BBEBE800E75652 /* D_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DD520BBEBE800E75652 /* D_ViewController.swift */; };
 		B2B74F8220B6F1AB000509CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B74F8120B6F1AB000509CA /* AppDelegate.swift */; };
-		B2B74F8420B6F1AB000509CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B74F8320B6F1AB000509CA /* ViewController.swift */; };
 		B2B74F8720B6F1AB000509CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B74F8520B6F1AB000509CA /* Main.storyboard */; };
 		B2B74F8920B6F1AB000509CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B74F8820B6F1AB000509CA /* Assets.xcassets */; };
 		B2B74F8C20B6F1AB000509CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B74F8A20B6F1AB000509CA /* LaunchScreen.storyboard */; };
@@ -25,9 +25,9 @@
 		B23A9DA820B701B100E75652 /* A_DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_DemoViewController.swift; sourceTree = "<group>"; };
 		B23A9DAA20B7039D00E75652 /* B_DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B_DemoViewController.swift; sourceTree = "<group>"; };
 		B23A9DD320B82BC000E75652 /* C_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_ViewController.swift; sourceTree = "<group>"; };
+		B23A9DD520BBEBE800E75652 /* D_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_ViewController.swift; sourceTree = "<group>"; };
 		B2B74F7E20B6F1AB000509CA /* RxSwift-Practise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Practise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B74F8120B6F1AB000509CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2B74F8320B6F1AB000509CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2B74F8620B6F1AB000509CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2B74F8820B6F1AB000509CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2B74F8B20B6F1AB000509CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				B23A9DA820B701B100E75652 /* A_DemoViewController.swift */,
 				B23A9DAA20B7039D00E75652 /* B_DemoViewController.swift */,
 				B23A9DD320B82BC000E75652 /* C_ViewController.swift */,
-				B2B74F8320B6F1AB000509CA /* ViewController.swift */,
+				B23A9DD520BBEBE800E75652 /* D_ViewController.swift */,
 				B23A9DA720B6F21800E75652 /* Supporting Files */,
 			);
 			path = "RxSwift-Practise";
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2B74F8420B6F1AB000509CA /* ViewController.swift in Sources */,
+				B23A9DD620BBEBE800E75652 /* D_ViewController.swift in Sources */,
 				B2B74F8220B6F1AB000509CA /* AppDelegate.swift in Sources */,
 				B23A9DD420B82BC000E75652 /* C_ViewController.swift in Sources */,
 				B23A9DAB20B7039D00E75652 /* B_DemoViewController.swift in Sources */,
@@ -371,7 +371,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R43737H5WP;
 				INFOPLIST_FILE = "RxSwift-Practise/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shuwen.RxSwift-Practise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -387,7 +390,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R43737H5WP;
 				INFOPLIST_FILE = "RxSwift-Practise/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shuwen.RxSwift-Practise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
