@@ -40,11 +40,12 @@ extension URLSession {
     public func sendRequest(_ request: URLRequest) -> Observable<(Data, URLResponse)> {
         return Observable.create { observer -> Disposable in
             let task = self.dataTask(with: request, completionHandler: { (data, response, error) in
-                if let tData = data, let resp = response{
-                    observer.onNext((tData, resp))
-                }
                 if let err = error {
                     observer.onError(err)
+                    return
+                }
+                if let tData = data, let resp = response{
+                    observer.onNext((tData, resp))
                 }
                 observer.onCompleted()
             })

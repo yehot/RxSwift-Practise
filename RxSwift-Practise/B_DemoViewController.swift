@@ -61,7 +61,7 @@ class B_DemoViewController: UIViewController {
          - MainScheduler.instance 主线程
      
      5. observeOn 后 跟 map，是转换线程后，继续处理
-        observeOn 后 跟 subscribe，是订阅
+        调用 observeOn 指定接下来的操作在哪个线程
      
      6. 此例中，并没有直接使用 URLSession
      

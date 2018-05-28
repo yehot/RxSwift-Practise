@@ -103,7 +103,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3YN-0c-oh2">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="D_Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3YN-0c-oh2">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -112,6 +112,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tmd-AZ-tQO" kind="show" id="5fk-rO-tN0"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Me4-jo-ILB" style="IBUITableViewCellStyleDefault" id="DD4-aW-Ksm">
                                         <rect key="frame" x="0.0" y="176" width="375" height="44"/>
@@ -142,7 +145,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1OK-ij-6Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692" y="562"/>
+            <point key="canvasLocation" x="-218" y="562"/>
         </scene>
         <!--Demo View Controller-->
         <scene sceneID="ehh-4c-P5u">
@@ -174,6 +177,21 @@
             </objects>
             <point key="canvasLocation" x="2326" y="832"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Jks-xg-DlO">
+            <objects>
+                <viewController id="tmd-AZ-tQO" customClass="D_ViewController" customModule="RxSwift_Practise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1bf-uJ-Qas">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qQY-Om-fN5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JyA-Vx-GnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2326" y="1607"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hUV-q0-Df1">
             <objects>
@@ -188,7 +206,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3E-hP-r5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-260" y="562"/>
+            <point key="canvasLocation" x="-1038" y="562"/>
         </scene>
     </scenes>
 </document>
