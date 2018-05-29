@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
+// RxCocoa 基本用法
 class A_DemoViewController: UIViewController {
 
     lazy var bag = DisposeBag()
@@ -32,8 +33,6 @@ class A_DemoViewController: UIViewController {
         
         // MARK: 2、订阅 textField.text
         let textField = UITextField()
-        
-        // subscribe(on: )
         textField.rx.text
             .subscribe { (event: Event<String?>) in
                 print(event.element as Any)  // 需要解包两次
@@ -49,7 +48,7 @@ class A_DemoViewController: UIViewController {
             }
             .disposed(by: bag)
         
-        // subscribe(onNext:) 的省略写法，默认参数可以不传
+        // subscribe(onNext:) 的省略写法，参数可省略
         textField.rx.text
             .subscribe(onNext: { (text) in
                 print(text!)

@@ -26,6 +26,34 @@ class C_ViewController: UIViewController {
             })
             .disposed(by: bag)
     }
+    
+    /**
+        创建 Observable
+        可以用 create，也可以用 of、from、just
+     
+     
+     */
+    // 简化写法： Observable.create 出一个 可观察的（Observable的） string 类型对象
+    func test() -> Observable<String> {
+        
+        // 两种使用 create 创建 Observable 的写法
+        // 1.  let =
+        let observable = Observable<String>.create { observableString -> Disposable in
+            observableString.onNext("1")
+            observableString.onCompleted()
+            return Disposables.create {
+                // 释放资源
+            }
+        }
+        observable.subscribe(onNext: { (str) in
+            print(str)
+        }).disposed(by: bag)
+        
+        // 2. 作为 return
+        return Observable.create { observer -> Disposable in
+            return Disposables.create()
+        }
+    }
 }
 
 extension URLSession {
@@ -56,12 +84,4 @@ extension URLSession {
             }
         }
     }
-    
-    // 简化写法： Observable.create 出一个 可观察的（Observable的） string 类型对象
-    func test() -> Observable<String> {
-        return Observable.create { observer -> Disposable in
-            return Disposables.create()
-        }
-    }
-    
 }

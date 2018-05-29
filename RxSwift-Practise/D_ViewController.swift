@@ -98,6 +98,7 @@ class D_ViewController: UIViewController {
     }
     
     // MARK:  将 array 转换为 流
+    //  从一个序列创建一个可被观察的序列
     func arrayToFlow() {
         let array1 = [1, 2, 3, 4]
         Observable.from(array1)
