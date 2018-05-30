@@ -13,6 +13,7 @@
 		B23A9DD420B82BC000E75652 /* C_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DD320B82BC000E75652 /* C_ViewController.swift */; };
 		B23A9DD620BBEBE800E75652 /* D_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DD520BBEBE800E75652 /* D_ViewController.swift */; };
 		B23A9DFE20BD236400E75652 /* E_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DFD20BD236400E75652 /* E_ViewController.swift */; };
+		B23A9E0020BD41AB00E75652 /* F_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A9DFF20BD41AB00E75652 /* F_ViewController.swift */; };
 		B2B74F8220B6F1AB000509CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B74F8120B6F1AB000509CA /* AppDelegate.swift */; };
 		B2B74F8720B6F1AB000509CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B74F8520B6F1AB000509CA /* Main.storyboard */; };
 		B2B74F8920B6F1AB000509CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B74F8820B6F1AB000509CA /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		B23A9DD320B82BC000E75652 /* C_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_ViewController.swift; sourceTree = "<group>"; };
 		B23A9DD520BBEBE800E75652 /* D_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_ViewController.swift; sourceTree = "<group>"; };
 		B23A9DFD20BD236400E75652 /* E_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = E_ViewController.swift; sourceTree = "<group>"; };
+		B23A9DFF20BD41AB00E75652 /* F_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F_ViewController.swift; sourceTree = "<group>"; };
 		B2B74F7E20B6F1AB000509CA /* RxSwift-Practise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Practise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B74F8120B6F1AB000509CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B74F8620B6F1AB000509CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				B23A9DD320B82BC000E75652 /* C_ViewController.swift */,
 				B23A9DD520BBEBE800E75652 /* D_ViewController.swift */,
 				B23A9DFD20BD236400E75652 /* E_ViewController.swift */,
+				B23A9DFF20BD41AB00E75652 /* F_ViewController.swift */,
 				B23A9DA720B6F21800E75652 /* Supporting Files */,
 			);
 			path = "RxSwift-Practise";
@@ -226,6 +229,7 @@
 				B2B74F8220B6F1AB000509CA /* AppDelegate.swift in Sources */,
 				B23A9DFE20BD236400E75652 /* E_ViewController.swift in Sources */,
 				B23A9DD420B82BC000E75652 /* C_ViewController.swift in Sources */,
+				B23A9E0020BD41AB00E75652 /* F_ViewController.swift in Sources */,
 				B23A9DAB20B7039D00E75652 /* B_DemoViewController.swift in Sources */,
 				B23A9DA920B701B100E75652 /* A_DemoViewController.swift in Sources */,
 			);
