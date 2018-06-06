@@ -30,12 +30,25 @@ import RxSwift
          - 或者，如果是网络原因、token 过期等，需要结束整个流程
  */
 class F_ViewController: UIViewController {
-    
+    private lazy var bag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let noteList = mock_noteListFromDatabase()
-        NoteSyncService.shared.startSync(noteList: noteList)
+        NoteSyncService.shared.startSync(noteList: noteList, completionHandler: { (result) in
+            switch result {
+            case .success(let (serverID)):
+                print("------ ↑ 笔记: \(serverID) 处理完成 ----- \n")
+                // 完成一个，从 noteModels 队列中移除一个；更新页面状态
+            case .failure(let error):
+                print(error)
+                print("❌ 中止同步任务？")
+            case .completed:
+                print("===== ✅ 全部笔记同步完成 =====")
+                // 同步完成，移除队列中的 noteModels； 更新页面
+            }
+        })
     }
     
     deinit {
