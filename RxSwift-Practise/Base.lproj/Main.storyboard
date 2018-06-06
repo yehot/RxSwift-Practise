@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="1532" y="-714"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home  View Controller-->
         <scene sceneID="aDf-vy-Ghu">
             <objects>
                 <tableViewController id="RfA-XA-j8f" sceneMemberID="viewController">
@@ -198,7 +198,7 @@
                             <outlet property="delegate" destination="RfA-XA-j8f" id="8Y6-xf-2ZZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="gMv-3j-eO4"/>
+                    <navigationItem key="navigationItem" title="Home  View Controller" id="gMv-3j-eO4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1OK-ij-6Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,20 +249,26 @@
             </objects>
             <point key="canvasLocation" x="3145" y="1159"/>
         </scene>
-        <!--View Controller-->
+        <!--F_View Controller-->
         <scene sceneID="kcc-Pq-FxX">
             <objects>
-                <viewController id="yaP-uS-nSE" customClass="F_ViewController" customModule="RxSwift_Practise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yaP-uS-nSE" userLabel="F_View Controller" customClass="F_ViewController" customModule="RxSwift_Practise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pj2-pX-W0D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="note-list" translatesAutoresizingMaskIntoConstraints="NO" id="BQs-mj-FBo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2CA-TD-LWP"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBm-hj-qbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3170" y="1890"/>
+            <point key="canvasLocation" x="3168.8000000000002" y="1889.5052473763119"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Jks-xg-DlO">
@@ -296,4 +302,7 @@
             <point key="canvasLocation" x="-1038" y="562"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="note-list" width="429" height="697"/>
+    </resources>
 </document>
