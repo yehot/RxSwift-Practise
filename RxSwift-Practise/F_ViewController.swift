@@ -39,16 +39,17 @@ class F_ViewController: UIViewController {
         NoteSyncService.shared.startSync(noteList: noteList, completionHandler: { (result) in
             switch result {
             case .success(let (serverID)):
-                print("------ ↑ 笔记: \(serverID) 处理完成 ----- \n")
-                // 完成一个，从 noteModels 队列中移除一个；更新页面状态
+                print("------ ↑ 笔记: \(serverID) 处理完成，更新页面状态 ----- \n")
             case .failure(let error):
-                print(error)
-                print("❌ 中止同步任务？")
+                print("❌ 中止同步任务？\(error)")
             case .completed:
-                print("===== ✅ 全部笔记同步完成 =====")
-                // 同步完成，移除队列中的 noteModels； 更新页面
+                print("===== ✅ 全部笔记同步结束， 更新页面状态 =====")
             }
         })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NoteSyncService.shared.cancle()
     }
     
     deinit {
@@ -61,16 +62,17 @@ class F_ViewController: UIViewController {
     func mock_noteListFromDatabase() -> [NoteModel] {
         
         // 1、有 serverID 的笔记（只有有变更的部分需要上传）
+        // 2、没有 serverID 的笔记（断网产生的：所有内容都需要上传）
+
         let note1 = NoteModel.init(localID: "local_id_1", title: "title1", content: "笔记1")
-        note1.serverID = "serverID_1"
         note1.isTitleNeedUpload = true
         
         let note2 = NoteModel.init(localID: "local_id_2", title: "title2", content: "笔记2")
         note2.serverID = "serverID_2"
         note2.isContentNeedUpload = true
 
-        // 2、没有 serverID 的笔记（断网产生的：所有内容都需要上传）
         let note3 = NoteModel.init(localID: "local_id_3", title: "title3", content: "笔记3")
+        note3.serverID = "serverID_3"
         note3.isContentNeedUpload = true
         note3.isTitleNeedUpload = true
         

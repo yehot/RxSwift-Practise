@@ -21,25 +21,44 @@ class NoteSyncService {
     
     private lazy var bag = DisposeBag()
 
+    var needCancel = false
+    
     func startSync(noteList: [NoteModel], completionHandler: @escaping (Result<String, NoteError>) -> Void) {
+        self.needCancel = false
+
+        // subscribeOn()设置起点在哪个线程，observeOn()设置后续工作在哪个线程
         Observable.from(noteList)
             .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
             .concatMap { (noteModel) -> Observable<(String, Action, Bool)> in
                 return self.uploadSingleNote(noteModel, completion: completionHandler)
             }
+            .observeOn(MainScheduler.instance)
+            .takeWhile({ (note) -> Bool in
+                return !self.needCancel
+            })
             .subscribe(onNext: { (serverID, action, isSuccess) in
                 // 这里 onNext 的并不是 单条笔记同步完成，仅仅是此条笔记完成一个动作
                 print("😄 笔记 \(serverID) \(action.rawValue) 成功")
             }, onError: { (err) in
                 completionHandler(.failure(err as! NoteError))
             }, onCompleted: {
-                completionHandler(.completed)
+                if !self.needCancel { // 取消也会 
+                    completionHandler(.completed)
+                }
             })
             .disposed(by: bag)
     }
     
+    func cancle() {
+        self.needCancel = true
+        print("========== cancel =========")
+    }
+    
     private func uploadSingleNote(_ noteModel: NoteModel, completion: @escaping (Result<String, NoteError>) -> Void) -> Observable<(String, Action, Bool)> {
         return Observable.just(noteModel)
+            .takeWhile({ (note) -> Bool in
+                return !self.needCancel
+            })
             .filter({ (noteModel) -> Bool in
                 print("\n------ ↓ 开始 handle 笔记: \(noteModel.localID) -----")
                 return noteModel.serverID?.isEmpty == false // 判断是否有 serverAudioID
@@ -56,7 +75,10 @@ class NoteSyncService {
             }
             .do(onCompleted: {
                 // 这里 onCompleted 的才是 单条笔记同步完成
-                completion(.success(noteModel.serverID!))
+                print("++++++++并没有 cancle 掉 ========")
+                if let serverID = noteModel.serverID {
+                    completion(.success(serverID))
+                }
             })
     }
     
